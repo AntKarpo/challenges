@@ -19,9 +19,14 @@ body {
 .header {
   background: #140523;
   color: #ffffff;
+  z-index: 1;
   height: 80px;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /*it seems to work with width 100%. cause without it doesnt. if someone has an idea pls tell me "Anton"*/
 }
 
 .header__text {
@@ -41,6 +46,9 @@ body {
   background: #140523;
   color: #ffffff;
   height: 48px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 /**
@@ -53,6 +61,7 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+  position: relative;
 }
 
 .card__heading {
@@ -68,6 +77,9 @@ body {
   padding: 6px 12px;
   border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /**
@@ -87,4 +99,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
+  position: fixed;
+  bottom: 50px;
 }
