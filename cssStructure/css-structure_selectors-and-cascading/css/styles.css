@@ -89,7 +89,7 @@ footer a {
 
 /*DONE 7. These styles should apply to all paragraphs and all lists (please use a class selector) */
 .list,
-.text-note {
+.text {
   outline: 2px dashed red;
   color: #2c3f3f;
 }
@@ -115,7 +115,7 @@ footer p {
 }
 
 /* 11.DONE These styles should apply to all lists in the main content */
-main li {
+main .list {
   outline: 2px dashed red;
   padding: 1rem 2rem;
   background: #caced2;
@@ -127,7 +127,7 @@ main li {
   margin: 0 0 0.5rem 0;
 }
 
-.list:only-child {
+.list .list {
   /* 13. DONE These styles should apply to all nested lists DONE */
   outline: 2px dashed red;
   margin: 0.5rem 0 0 0;
@@ -135,7 +135,7 @@ main li {
 }
 
 /* 14. These styles should apply to all list items in nested lists */
-li li {
+.list .list li {
   outline: 2px dashed red;
   margin: 0;
   color: #2673bb;
