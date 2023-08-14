@@ -61,14 +61,13 @@ h1 {
 
 .box--one {
   background-color: lightblue;
-
-  width: 100px;
+  display: flex;
+  width: 50%;
   height: 100px;
 }
 
 .box--two {
   background-color: lightgreen;
-
   width: 100px;
   height: 100px;
 }
@@ -93,4 +92,39 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+
+
+@media screen and (min-width: 599px) {
+  .box--two {
+    background-color: lightgreen;
+    width: 200px;
+    height: 100px;
+  }
+
+}
+@media screen and (min-width: 1199px) {
+  .box--two {
+    background-color: lightgreen;
+    width: 400px;
+    height: 100px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .box--three {
+    background-color: lightpink;
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .box--four {
+    background-color: rgb(6, 145, 10);
+
+  width: 100px;
+  height: 100px;
+  }
 }
