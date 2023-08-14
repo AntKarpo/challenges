@@ -12,9 +12,12 @@ a {
   text-decoration: none;
 }
 
-ul {
+.navigation__menu {
+  display: flex;
   list-style: none;
   padding: 0;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header {
