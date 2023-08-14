@@ -9,20 +9,29 @@ body {
   max-width: 1200px;
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+}
 .main__title {
   padding: 10px;
   background: #f3f5f9;
 }
 
 .profile__image {
+  display: flex;
   border-radius: 50%;
   max-width: 50%;
   height: auto;
+  align-self: center;
 }
 
 .tech-stack__list {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /*important so when you make the viewpoint smaller you couldnt see it*/
 }
 
 .tech-stack__list-item {
