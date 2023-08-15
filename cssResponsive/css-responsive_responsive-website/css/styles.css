@@ -30,20 +30,19 @@ the start of the introduction. */
   --regular-text: 1rem;
   --regular-line-height: 1.5rem;
 
-  /* Calculations    16px=1rem   */
+  /* Calculations  */
 
-  /* Calculating the header height 
-          header-height = 12.6rem 202px */
+  /* Calculating the header height */
   --header-height: calc(
     var(--header-brand-line-height) + var(--header-text-line-height) +
       (3 * var(--gap))
   );
 
-  /* Calculating the nav height    nav-height =   3.9rem  62px */
+  /* Calculating the nav height */
   --nav-height: calc(var(--regular-line-height) + (2 * var(--gap)));
 
   /* Calculating the exact margin required to put the main content
-    right under the header and nav     margin-top  = 16.5  264px*/
+    right under the header and nav */
   --main-content-margin-top: calc(var(--header-height) + var(--nav-height));
 }
 
@@ -244,7 +243,7 @@ CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 /* Media Query Tablet */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) /*reason for 600px was just that i wanted something easy to check the changes*/ {
   .card-section {
     display: flex;
     justify-content: center;
@@ -254,15 +253,15 @@ width, etc. */
 
   .product-card {
     flex-wrap: wrap;
-    width: 40%;
+    width: 40%; /*trial and error to see what looks best*/
   }
   .intro-text {
     align-self: start;
-    width: 40%;
+    width: 40%; /*trial and error to see what looks best*/
   }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) /*reason for 900px was just that i wanted something easy to check the changes*/ {
   .card-section {
     display: flex;
     justify-content: center;
@@ -270,6 +269,6 @@ width, etc. */
     gap: var(--gap);
   }
   .--forest {
-    width: 86%;
+    width: 86%; /*86% was a trial and error process to see what looks closest to the preview*/
   }
 }
