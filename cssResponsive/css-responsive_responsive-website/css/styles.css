@@ -246,7 +246,6 @@ width, etc. */
 /* Media Query Tablet */
 @media screen and (min-width: 600px) {
   .card-section {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
@@ -265,7 +264,6 @@ width, etc. */
 
 @media screen and (min-width: 900px) {
   .card-section {
-    width: 100%;
     display: flex;
     justify-content: center;
     flex-flow: wrap;
