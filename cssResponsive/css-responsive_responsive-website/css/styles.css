@@ -30,19 +30,20 @@ the start of the introduction. */
   --regular-text: 1rem;
   --regular-line-height: 1.5rem;
 
-  /* Calculations */
+  /* Calculations    16px=1rem   */
 
-  /* Calculating the header height */
+  /* Calculating the header height 
+          header-height = 12.6rem 202px */
   --header-height: calc(
     var(--header-brand-line-height) + var(--header-text-line-height) +
       (3 * var(--gap))
   );
 
-  /* Calculating the nav height */
+  /* Calculating the nav height    nav-height =   3.9rem  62px */
   --nav-height: calc(var(--regular-line-height) + (2 * var(--gap)));
 
   /* Calculating the exact margin required to put the main content
-    right under the header and nav*/
+    right under the header and nav     margin-top  = 16.5  264px*/
   --main-content-margin-top: calc(var(--header-height) + var(--nav-height));
 }
 
@@ -243,11 +244,34 @@ CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 /* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media screen and (min-width: 600px) {
+  .card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: var(--gap);
+  }
 
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+  .product-card {
+    flex-wrap: wrap;
+    width: 40%;
+  }
+  .intro-text {
+    align-self: start;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: var(--gap);
+  }
+  .--forest {
+    width: 86%;
+  }
+}
