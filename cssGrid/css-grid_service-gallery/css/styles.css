@@ -23,7 +23,8 @@ body {
   max-width: 900px;
   padding: 2rem;
   margin: auto;
-
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
   /* Add styles to the container */
 }
 
