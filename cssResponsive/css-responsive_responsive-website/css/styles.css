@@ -30,7 +30,7 @@ the start of the introduction. */
   --regular-text: 1rem;
   --regular-line-height: 1.5rem;
 
-  /* Calculations */
+  /* Calculations  */
 
   /* Calculating the header height */
   --header-height: calc(
@@ -42,7 +42,7 @@ the start of the introduction. */
   --nav-height: calc(var(--regular-line-height) + (2 * var(--gap)));
 
   /* Calculating the exact margin required to put the main content
-    right under the header and nav*/
+    right under the header and nav */
   --main-content-margin-top: calc(var(--header-height) + var(--nav-height));
 }
 
@@ -243,11 +243,32 @@ CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 /* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media screen and (min-width: 600px) /*reason for 600px was just that i wanted something easy to check the changes*/ {
+  .card-section {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: var(--gap);
+  }
 
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+  .product-card {
+    flex-wrap: wrap;
+    width: 40%; /*trial and error to see what looks best*/
+  }
+  .intro-text {
+    align-self: start;
+    width: 40%; /*trial and error to see what looks best*/
+  }
+}
+
+@media screen and (min-width: 900px) /*reason for 900px was just that i wanted something easy to check the changes*/ {
+  .card-section {
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: var(--gap);
+  }
+  .--forest {
+    width: 86%; /*86% was a trial and error process to see what looks closest to the preview*/
+  }
+}
