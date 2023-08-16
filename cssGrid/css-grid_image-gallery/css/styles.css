@@ -24,7 +24,10 @@ body {
 .teaser-grid {
   min-width: 40rem;
   min-height: 50vh;
-
+  display: grid;
+  grid-template-rows: repeat(2, 200px);
+  grid-template-columns: repeat(2, 400px);
+  /*magic numbers to make it look pretty*/
   /* Add styles to the grid container */
 }
 
