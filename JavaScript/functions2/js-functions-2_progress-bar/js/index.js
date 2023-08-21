@@ -18,7 +18,23 @@ For that:
  (HINT: you can add a 'scroll' event listener to the document )
  (HINT: you can change the width of an element like this: element.style.width = '10px')
 */
-
 const progressBar = document.querySelector('[data-js="progress-bar"]');
 
-function calculateScrollPercentage() {}
+function calculateScrollPercentage() {
+  const scrollY = window.scrollY;
+  const windowHeight = window.innerHeight;
+  const documentHeight = document.body.clientHeight;
+
+  const scrollPercentage = (scrollY / (documentHeight - windowHeight)) * 100;
+  return scrollPercentage;
+}
+
+function updateProgressBar() {
+  const scrollPercentage = calculateScrollPercentage();
+  progressBar.style.width = `${scrollPercentage}%`;
+}
+
+updateProgressBar();
+
+document.addEventListener('scroll', updateProgressBar);
+
