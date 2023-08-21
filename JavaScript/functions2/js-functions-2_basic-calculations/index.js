@@ -10,6 +10,7 @@ They should return the result of the respective calculation:
 - remainder: the modulo or remainder of of "a modulo b"
 */
 
+// also it's possible to do return a+b;
 function add(a, b) {
 const sum = a + b ;
 return sum; 
