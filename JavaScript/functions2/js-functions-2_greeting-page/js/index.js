@@ -38,7 +38,6 @@ function getGreeting() {
 }
   // Code here
 
-
 function getDayColor() {
   
     const currentWeekDay = new Date().getDay();
