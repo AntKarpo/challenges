@@ -32,13 +32,11 @@ function greetMary() {
 }
 // --v-- write your code here --v--
 function greet(name) {
-console.log("Welcome" +name+ ", good to see you again!")
+console.log("Welcome " +name + ", good to see you again!")
 }
-greet();
-  
-greetBob("Bob");
-greetAlice("Alice");
-greetMary("Mary");
+  greet('Mary');
+  greet('Bob');
+  greet('Alice');
 // --^-- write your code here --^--
 
 logSeparator(3);
