@@ -11,25 +11,30 @@ They should return the result of the respective calculation:
 */
 
 function add(a, b) {
+const sum = a + b ;
+return sum; 
   // Code here
 }
 
 function subtract(a, b) {
-  // Code here
+  const sum = a - b ;
+  return sum; 
 }
 
 function multiply(a, b) {
-  // Code here
+  const sum = a * b ;
+  return sum; 
 }
 
 function divide(a, b) {
-  // Code here
+  const sum = a / b ;
+  return sum; 
 }
 
 function remainder(a, b) {
-  // Code here
+  const sum = a % b ;
+  return sum; 
 }
-
 /*
 These console.asserts check if your functions are correct. If nothing appears in your console it works properly!
 */
