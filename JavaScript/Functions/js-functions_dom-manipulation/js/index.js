@@ -6,30 +6,45 @@ const grayButton = document.querySelector("[data-js=js-gray-button]");
 
 /*
 We want to add some functionality to the buttons on this page. When pressing a button, the corresponding color should be applied to the box.
-  1: Create a function removeAllColors which removes all color classes from the box.
-  2: Create a function addColor which takes a class name as a parameter and adds the class to the box.
-  3: Use the two functions in the event listeners of the buttons to color in the box when the button is clicked.
+1: Create a function removeAllColors which removes all color classes from the box.
+2: Create a function addColor which takes a class name as a parameter and adds the class to the box.
+3: Use the two functions in the event listeners of the buttons to color in the box when the button is clicked.
 */
 
+function removeAllColors() {
+  box.classList.remove('red', 'green', 'blue', 'gray');
+}
+function addColor(redButton, greenButton,blueButton,grayButton) {
+  box.classList.add(redButton, greenButton,blueButton,grayButton);
+}
+
 redButton.addEventListener("click", () => {
+  removeAllColors();
+ addColor('red');
   // use your functions to
   // - remove all classes
   // - then add the class name: "red"
 });
 
 blueButton.addEventListener("click", () => {
+  removeAllColors();
+  addColor('blue');
   // use your functions to
   // - remove all classes
   // - then add the class name: "blue"
 });
 
 greenButton.addEventListener("click", () => {
+  removeAllColors();
+  addColor('green');
   // use your functions to
   // - remove all classes
   // - then add the class name: "green"
 });
 
 grayButton.addEventListener("click", () => {
+  removeAllColors();
+  addColor('gray');
   // use your functions to
   // - remove all classes
   // - then add the class name: "gray"
