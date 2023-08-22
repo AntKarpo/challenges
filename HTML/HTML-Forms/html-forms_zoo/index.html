@@ -21,20 +21,40 @@
           <legend>Enter your information</legend>
 
           <!-- Email: label & input -->
-
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email">
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date">
           <!-- Date: label & input -->
 
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
+             <label for="sloths">relaxed sloths</label>
+             <input type="radio" id="sloths" name="animals" value="sloths">
+
+             <label for="kangaroos">jumpy kangaroos</label>
+             <input type="radio" id="kangaroos" name="animals" value="kangaroos">
+
+             <label for="racoons"> thieving racoons</label>
+             <input type="radio" id="racoons" name="animals" value="racoons">
+           
             <!-- Radio Buttons: labels & inputs -->
           </fieldset>
 
           <!-- Textarea: label & input -->
-
+          <label for="comments">Comment here:</label>
+          <textarea name="comments" cols="20" rows="10" placeholder="Write your concerns here..."></textarea>
           <!-- Two Checkboxes: labels & inputs -->
-
+          <label for="TaC">Terms and conditions</label>
+          <input type="checkbox" name="TaC" id="TaC" value="TaC">
+          <label for="newsletter">Sign up for our newsletter</label>
+       <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
           <!-- Two Buttons: reset & submit -->
+          <footer>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </footer>
         </fieldset>
       </form>
     </section>
