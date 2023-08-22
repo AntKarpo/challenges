@@ -11,7 +11,7 @@
   </head>
   <body>
     <section>
-      <h1 class="title">Understanding A11y in Forms</h1>
+      <h1 id="title">Understanding A11y in Forms</h1>
       <p id="description">
         Please let us know how we can support you with a11y issues.
       </p>
@@ -19,11 +19,11 @@
       <form for="title" aria-labelledby="title">
         <fieldset aria-describedby="description">
           <legend>Enter your information</legend>
-          <label aria-describedby="name">Name:</label>
+          <label for="name">Name:</label>
           <input id="name" type="text" name="name" />
-          <label aria-describedby="age">Age:</label>
+          <label for="age">Age:</label>
           <input id="age" type="text" name="age" />
-          <label aria-describedby="color">Color you cannot see:</label>
+          <label for="color">Color you cannot see:</label>
           <input id="color" type="color" name="color" />
           <textarea rows="7" placeholder="Leave us a message..."></textarea>
           <button type="submit">Submit</button>
