@@ -28,5 +28,5 @@ console.log('badness: ', badness);
 console.log('oder date: ', orderDate);
 console.log('tos: ', tos);
 
-console.log(parseFloat(age) + parseFloat(badness));
+console.log("The age-badness-sum of "+ firstName+ "is ", parseFloat(age) + parseFloat(badness));
 });
