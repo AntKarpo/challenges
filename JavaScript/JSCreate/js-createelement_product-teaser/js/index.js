@@ -14,11 +14,12 @@ const imageSrc =
 
 
   const article = document.createElement("article");
-  document.body.appendChild(article);
-  article.className = "secondproduct";
+  document.body.append(article);
+  article.classList.add("products");
 
 
-const productContainer = document.querySelector(".secondproduct");
+
+const productContainer = document.querySelector(".products");
 
 const productHTML = `
 <article class="product">
