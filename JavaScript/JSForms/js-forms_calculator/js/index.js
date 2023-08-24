@@ -26,7 +26,23 @@ form.addEventListener("submit", (event) => {
 
   // --v-- write your code here --v--
 
-  // --^-- write your code here --^--
+  const operator = event.target.querySelector('input[name="operator"]:checked').value;
 
+  const numberA =Number(event.target.elements.numberA.value);
+const numberB = Number(event.target.elements.numberB.value);
+
+  if  (operator === "addition") {
+  result = add(numberA, numberB);
+}else if ( operator === "subtraction"){
+  result = subtract(numberA, numberB);
+} else if ( operator === "multiplication"){
+  result = multiply(numberA, numberB);
+} else if ( operator === "division"){
+  result = divide(numberA, numberB);
+  if (numberB === 0){
+    result = "choose another number numnuts";
+  }
+} 
+  // --^-- write your code here --^--
   resultOutput.textContent = result;
 });
