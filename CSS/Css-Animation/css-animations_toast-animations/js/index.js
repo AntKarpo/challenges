@@ -18,10 +18,22 @@ toast.addEventListener("click", () => {
   hideToast();
 });
 
-// These actions are in a separate function
-// because we need them in two places in our code.
+
+
 function hideToast() {
   startButton.disabled = false;
   toast.classList.add("toast--hidden");
   countdown.classList.remove("countdown--visible");
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+  const startButton = document.querySelector('[data-js="start-button"]');
+  const toast = document.querySelector('[data-js="toast"]');
+
+  startButton.addEventListener('click', function () {
+    toast.classList.add('toast--spinning');
+    setTimeout(() => {
+      toast.classList.remove('toast--spinning');
+    }, 3000); 
+  });
+});
