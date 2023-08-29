@@ -23,13 +23,14 @@ const cards = [
   },
 ];
 
-const onlyCardWithIdTwo = null;
+const onlyCardWithIdTwo = cards.filter((card)=> card.id === "2")
 
-const allCardsWith3Tags = null;
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsWith3Tags = cards.filter((card)=> card.tags.length === 3)
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card)=> card.isBookmarked === false)
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card)=>card.isBookmarked =true)
 
 export {
   onlyCardWithIdTwo,
