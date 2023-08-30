@@ -27,13 +27,17 @@ const onlyCardWithIdTwo = cards.filter((card)=> {
  return card.id === "2";
 });
 
-const allCardsWith3Tags = cards.filter((card)=> card.tags.length === 3)
+const allCardsWith3Tags = cards.filter((card)=> {
+  return card.tags.length === 3
+});
 
-const allCardsThatAreNotBookmarked = cards.filter((card)=> !card.isBookmarked)
+const allCardsThatAreNotBookmarked = cards.filter((card)=> {
+  return !card.isBookmarked;
+});
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => (card.tags.includes("html") || card.tags.includes("js")) && card.isBookmarked)
-
-console.log(onlyCardWithIdTwo);
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => { 
+return (card.tags.includes("html") || card.tags.includes("js")) && card.isBookmarked
+});
 
 export {
   onlyCardWithIdTwo,
