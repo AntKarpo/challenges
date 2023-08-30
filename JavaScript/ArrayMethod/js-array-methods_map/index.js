@@ -42,6 +42,4 @@ const questionAndAnswer = cards.map((card)=>{
   };
 }); // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
 
-console.log(questionAndAnswer);
-
 export { lowerCaseAnswers, questionsAndAnswersTogether, questionAndAnswer };
