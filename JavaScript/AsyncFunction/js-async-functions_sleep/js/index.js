@@ -22,10 +22,10 @@ button5.addEventListener("click", async () => {
   icon.textContent = "⏰";
 });
 
-function handleSleepFor10Button() {
+async function handleSleepFor10Button() {
   icon.textContent = "💤";
   body.classList.add('dark');
-  sleep(10).then(() => {
+  await sleep(10).then(() => {
     icon.textContent = "⏰";
     body.classList.remove("dark"); 
   });

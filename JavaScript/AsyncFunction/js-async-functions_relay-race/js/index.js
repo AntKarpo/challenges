@@ -16,18 +16,18 @@ startRaceButton.addEventListener("click", async () => {
    * The relay runners are already available in the global scope as `runner1`,
    * `runner2` and `runner3`.
    */
-    await animateRunner(runner1);
-    await animateRunner(runner2);
-    await animateRunner(runner3);
   /* Hint 2:
-   * Use `animateRunner(runnerX)` to animate the runners.
-   *
-   * Hint 3:
-   * The `animateRunner` function returns a promise which resolves when the animation is done.
-   **/
-
-  // --v-- write your code here --v--
-
+  * Use `animateRunner(runnerX)` to animate the runners.
+  *
+  * Hint 3:
+  * The `animateRunner` function returns a promise which resolves when the animation is done.
+  **/
+ 
+ // --v-- write your code here --v--
+ 
+ await animateRunner(runner1);
+ await animateRunner(runner2);
+ await animateRunner(runner3);
   // --^-- write your code here --^--
 
   startRaceButton.removeAttribute("disabled");
