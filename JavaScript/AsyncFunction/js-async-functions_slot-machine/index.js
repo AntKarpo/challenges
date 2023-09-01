@@ -27,25 +27,27 @@ spinButton.addEventListener("click", async () => {
 try {
   result.setSpinning();
 
-  const symbols = await Promise.all([wheel1, wheel2, wheel3].map((wheel)=> wheel.spin())
-  );
+  const symbols = await Promise.all([wheel1, wheel2, wheel3]
+    .map((wheel)=> wheel.spin()));
+
   const sameSymbols = getMaxCount(symbols);
-  
+  console.log(sameSymbols);
+  console.log(symbols);
+
   if (sameSymbols === 2) {
     result.setResult(10);
+    console.log('hello');
   }
   if (sameSymbols === 3) {
     result.setResult(100);
   } 
-  if (sameSymbols > 2) {
+  if (sameSymbols < 2) {
 result.setResult(0);
-  };
-  result.setResult(newPoints);
+  }
+} catch  {
+  result.setMachineChoked();  
+} finally {
   spinButton.disabled = false;
-
-} catch (error) {
-  result.setMachineChoked();
-  console.error(error);
 }
 
 });
