@@ -45,4 +45,4 @@ const person = {
   age: 24,
   firstName: "Alex",
 };
-const { lastName: personLastName, ...moreInformation } = person;
+export const { lastName: personLastName, ...moreInformation } = person;
