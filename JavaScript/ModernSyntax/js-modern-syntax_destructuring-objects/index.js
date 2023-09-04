@@ -22,7 +22,7 @@ console.log(course);
 //  2.3: 'isAdmin' property into the variable 'isAdmin' (false, if no such property exists)
 
 const user = { name: "John", years: 30 };
-const { name,years: age, isAdmin = false } = user;
+export const { name, years: age, isAdmin = false } = user;
 console.log(user);
 // EXERCISE 3
 // Extract the variables from the dog object and
@@ -45,4 +45,4 @@ const person = {
   age: 24,
   firstName: "Alex",
 };
-const {lastName:personLastName} = person;
+const { lastName: personLastName, ...moreInformation } = person;
