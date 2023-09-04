@@ -23,7 +23,7 @@ export async function fetchNewColor() {
       const response = await fetch(colorApiUrl);
       
       if (!response.ok) {
-        throw new Error(`Failed to fetch: ${response.status}`);
+        console.log(`Failed to fetch: ${response.status}`);
       }
   
       const data = await response.json();
