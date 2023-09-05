@@ -10,6 +10,7 @@ import {
   getFullNamesSortedByAge,
 } from "./index.js";
 
+
 const people = [
   {
     id: 1,
@@ -60,7 +61,7 @@ test('getNameAndAge() returns an array of formatted strings like this: "Skywalke
 
 test("getPeopleByAge() returns an array of people of a certain age", () => {
   const result = getPeopleByAge(people, 30);
-  expect(result).toEqual(["Doe","Doe", "Skywalker"])
+  expect(result).toEqual(["Jane Doe","John Doe", "Luke Skywalker"])
 });
 
 test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
