@@ -1,10 +1,9 @@
 import "./styles.css";
 
 export default function App() {
-  const nameDis = 'James';
   return (
     <>
-      <Greeting name={nameDis} />
+      <Greeting name={'James'} />
     </>
   );
 }
