@@ -2,5 +2,22 @@ import React from "react";
 import "./styles.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  function handleClick(){
+    console.log("You clicked me!");
+  }
+  return (
+    <>
+      <Button color="red" text="Button" disabled={false} onClick={handleClick} />
+    </>
+  )
+}
+
+function Button({color, disabled,text, click }){
+  return (
+    <button style={{color:color}}
+    disabled={disabled}
+    onClick={click}
+     >{text}
+     </button>   
+  )
 }
