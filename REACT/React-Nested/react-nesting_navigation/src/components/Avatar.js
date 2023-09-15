@@ -1,5 +1,5 @@
 import avatar from "./img/avatar.jpg";
-import { Image } from "./components/Image";
+import { Image } from "./Image";
 
 export function Avatar() {
     return(
