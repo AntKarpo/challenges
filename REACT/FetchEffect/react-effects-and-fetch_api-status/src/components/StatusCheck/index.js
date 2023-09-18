@@ -1,9 +1,10 @@
+import { useState } from "react";
 import "./StatusCheck.css";
 
 const apiStatusUrl = "https://example-apis.vercel.app/api/status";
 
 export default function StatusCheck() {
-  const statusIcon = "⁉️";
+  const [statusIcon, setStatusIcon] = useState("⁉️");
   // Something needs to change here…
   // ↙️
   function handleCheckApiStatus() {
@@ -20,8 +21,25 @@ export default function StatusCheck() {
      * is okay and false if it is not.
      **/
     // --v-- write your code here --v--
-    // --^-- write your code here --^--
+    
+    setStatusIcon("⏳");
+    fetch(apiStatusUrl)
+      .then((response) => {
+        if (response.ok) {
+          setStatusIcon("✅");
+        } else {
+          setStatusIcon("❌");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        setStatusIcon("🚨");
+      });
+      
   }
+
+    // --^-- write your code here --^--
+  
 
   return (
     <article className="status-check">
@@ -39,3 +57,4 @@ export default function StatusCheck() {
     </article>
   );
 }
+
