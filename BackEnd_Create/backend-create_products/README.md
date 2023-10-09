@@ -9,7 +9,7 @@ In this challenge, you'll further expand a fish shop. This time, you'll create n
 ### Prepare your Database
 
 If you have not done so, use MongoDB Compass to create a database:
-
+ 
 - the database should be called `fish-shop`,
 - there should be two collections: `products` and `reviews`,
 - download and extract the [resources](README.md#resources) and

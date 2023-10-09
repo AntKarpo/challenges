@@ -14,4 +14,18 @@ export default async function handler(request, response) {
 
     response.status(200).json(product);
   }
+  if (request.method === "DELETE") {
+    try {
+      const deletedProduct = await Product.findByIdAndDelete(id);
+console.log("delete", deletedProduct, id);
+      if (!deletedProduct) {
+        return response.status(404).json({ status: "Not Found" });
+      }
+
+      response.status(204).send(); 
+    } catch (error) {
+      console.error(error);
+      response.status(500).json({ status: "Internal Server Error" });
+    }
+}
 }
