@@ -1,6 +1,7 @@
-import useSWR from "swr";
+import useSWR, { mutate } from "swr";
 import { StyledHeading, StyledList } from "./ProductList.styled";
 import { StyledLink } from "../Link/Link.styled";
+import { StyledButton } from "../Button/Button.styled";
 
 export default function ProductList() {
   const { data, isLoading } = useSWR("/api/products");
@@ -12,6 +13,18 @@ export default function ProductList() {
   if (!data) {
     return;
   }
+  async function handleDelete(id) {
+    const response = await fetch(`/api/products/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (response.ok) {
+      mutate("/api/products");
+    }
+  }
 
   return (
     <>
@@ -19,7 +32,8 @@ export default function ProductList() {
       <StyledList>
         {data.map((product) => (
           <li key={product._id}>
-            <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
+            <StyledLink href={`/${product._id}`}>{product.name} </StyledLink>
+            <StyledButton onClick={() => handleDelete(product._id)}>Delete</StyledButton>
           </li>
         ))}
       </StyledList>
