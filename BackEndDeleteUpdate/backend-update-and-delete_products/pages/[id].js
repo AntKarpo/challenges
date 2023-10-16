@@ -1,4 +1,4 @@
-import Product from "../components/product";
+import Product from "@/db/models/Product";
 
 export default function ProductDetailsPage() {
   return (

@@ -17,6 +17,8 @@ export default function Product() {
   if (!data) {
     return;
   }
+  
+  
 
   return (
     <ProductCard>
